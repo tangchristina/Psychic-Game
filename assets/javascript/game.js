@@ -28,16 +28,26 @@ yourGuesses.push(userGuess);
 
 // Computer randomly uses a letter from the options array
 
+var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
+
+//Restarts the game when the guesses left runs out.
+
+var restart = function() {
+    guessesLeft = 9;
+    yourGuesses = [];
+    losses = 0;
+}
+
 
 // The score increments the appropriate amount based on the user guess and computer choice.
 if (guessesLeft === 0) {
     
     wins === 0;
     losses === 0;
-    guessesLeft === 9;
+    restart();
 }  
 
-else if (userGuess === computerChoice) {
+else if (userGuess === computerGuess) {
     wins++;
 } 
 
@@ -46,12 +56,15 @@ else {
     guessesLeft--;
 }
 
+
+
+
       
 
 
 // Displays the wins, losses, guesses left, and user guesses        
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
-guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
-userGuessText.textContent = "Your Guesses so far: " + yourGuesses;
+guessesLeftText.textContent = "Guesses left: " + guessesLeft;
+userGuessText.textContent = "Your guesses so far: " + yourGuesses.join(', ');
 }
