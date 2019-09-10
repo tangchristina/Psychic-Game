@@ -26,7 +26,7 @@ document.onkeyup = function(event) {
 var userGuess = event.key;
 yourGuesses.push(userGuess);
 
-// Computer randomly uses a letter from the options array
+// Computer randomly uses a letter from the computer choice array
 
 var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
 
