@@ -35,7 +35,7 @@ var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.len
 var restart = function() {
     guessesLeft = 9;
     yourGuesses = [];
-    losses = 0;
+    losses++;
 }
 
 
@@ -49,10 +49,10 @@ if (guessesLeft === 0) {
 
 else if (userGuess === computerGuess) {
     wins++;
+    restart();
 } 
 
 else {    
-    losses++;
     guessesLeft--;
 }
 
