@@ -2,6 +2,9 @@
 
 # Prerequisites - game is compatible on all browsers
 
+# Deployment
+https://tangchristina.github.io/Psychic-Game/
+
 # Instructions
 Test how psychic you are by guessing what letter the computer chose.
 
